@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="PageStyle.css">
+    <style>
+        /* Additional CSS styles */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        #weather-info {
+            display: none;
+        }
+        #weather-chart {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Weather App</h1>
+        <form id="location-form">
+            <div class="form-group">
+                <label for="location-input" class="text-muted">Enter a location:</label>
+                <input type="text" class="form-control" id="location-input" placeholder="City, state or country">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get Weather</button>
+        </form>
+        <div id="weather-info" class="mt-5">
+            <div class="weather-info text-center">
+                <h2 id="city-name"></h2>
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
+        </div>
+        <canvas id="weather-chart" width="400" height="400"></canvas>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
